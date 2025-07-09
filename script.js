@@ -167,9 +167,29 @@ function processData() {
         pointWidth: 45
     });
 
+    // Transform capacity data to include conditional coloring
+    const capacityDataWithColors = capacityData.map((capacityValue, index) => {
+        const demandValue = demandData[index];
+        
+        // If either value is null (spacing), return null
+        if (demandValue === null || capacityValue === null) {
+            return null;
+        }
+        
+        // If demand is higher than capacity, change capacity bar color to red
+        if (demandValue > capacityValue) {
+            return {
+                y: capacityValue,
+                color: '#B54A4A'
+            };
+        } else {
+            return capacityValue;
+        }
+    });
+
     series.push({
         name: 'Capacity',
-        data: capacityData,
+        data: capacityDataWithColors,
         color: '#67b29d',
         type: 'column',
         pointWidth: 20,
