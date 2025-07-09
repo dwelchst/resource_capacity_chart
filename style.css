@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#chart-container {
+    height: 500px;
+    margin: 20px 0;
+}
+
+.legend {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.legend h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.legend-item {
+    display: inline-block;
+    margin: 5px 15px 5px 0;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.week-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.week-btn {
+    background-color: #135c63;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.week-btn:hover {
+    background-color: #0e4a50;
+}
+
+.week-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#current-week {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    min-width: 80px;
+    text-align: center;
+}
